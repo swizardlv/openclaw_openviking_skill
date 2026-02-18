@@ -2,6 +2,19 @@
 
 An [OpenClaw](https://github.com/openclaw/openclaw) skill that integrates [OpenViking](https://github.com/volcengine/OpenViking) — a context database for AI agents — using NVIDIA NIM API for embeddings and VLM.
 
+## Why OpenViking? — Upgrading from OpenClaw's Default Memory
+
+OpenClaw's default `qmd` memory backend + manual `MEMORY.md` files work fine for lightweight use, but hit limits with large document collections:
+
+| Capability | qmd (default) | OpenViking |
+|------------|--------------|------------|
+| Semantic search | Basic vector matching | Directory-recursive + semantic fusion |
+| Auto summaries | ❌ | ✅ L0/L1/L2 three-tier |
+| Structured browsing | ❌ | ✅ Virtual filesystem |
+| Token savings | ❌ | ✅ Load only what's needed |
+
+**Recommended setup**: Keep qmd for daily lightweight memory, use OpenViking for large document libraries (books, codebases, research papers). Sub-agents can search OpenViking for relevant context instead of stuffing entire documents into prompts.
+
 ## What It Does
 
 - **Semantic search** across your indexed documents (books, code, notes, etc.)
