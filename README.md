@@ -8,7 +8,7 @@ Add this skill to your OpenClaw workspace:
 
 ```bash
 # Clone to your skills directory
-git clone https://github.com/your-username/openclaw_openviking_skill.git /path/to/skills/
+git clone https://github.com/swizardlv/openclaw_openviking_skill.git /path/to/skills/
 
 # Or copy the openviking/ folder into your workspace skills directory
 cp -r openviking/ ~/.openclaw/workspace/skills/
